@@ -18,16 +18,6 @@ dbBlablabusCursor = dbBlablabus.cursor()
 app = FastAPI()
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
-
-
 #Format d'appel : http://127.0.0.1:8000/blablabus/?fromDest=XXX&toDest=XXX&dateTrip=AAAA-MM-JJ
 #Example d'appel : http://127.0.0.1:8000/blablabus/?fromDest=XPB&toDest=QJZ&dateTrip=2022-04-01
 
